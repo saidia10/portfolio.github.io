@@ -13,29 +13,29 @@
     <!-- Contenu de la page -->
     <!-- Menu amélioré avec espacement -->
     <div class="container">
-        <div class="row">
-            <div class="col">
+        <ul class="ul row">
+            <li class="li col-md-4">
                 <button class="button btn-block" onclick="window.location.href='index.html'">
                     <p>Accueil</p>
                 </button>
-            </div>
-            <div class="col">
+            </li>
+            <li class="li col-md-4">
                 <button class="button btn-block" onclick="window.location.href='projets.html'">
                     <p>Projets</p>
                 </button>
-            </div>
-            <div class="col">
+            </li>
+            <li class="li col-md-4">
                 <button class="button btn-block" onclick="window.location.href='contacts.html'">
                     <p>Contacts</p>
                 </button>
-            </div>
-        </div>
+            </li>
+        </ul>
     </div>
 
     <!-- En-tête avec image de profil -->
     <div class="header text-center">
         <img src="image/moi.png" alt="Photo de profil" class="profile-img">
-        <h1></h1>
+        <h1>Assoumane SAIDI</h1>
     </div>
 
     <!-- Section sur l'éducation -->
@@ -62,79 +62,91 @@
     <div class="container section hidden">
         <h2 class="text-center">Compétences</h2>
         
-        <!-- Compétence en Cybersécurité -->
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Cybersécurité</h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                        90%
+        <div class="row">
+            <!-- Compétence en Cybersécurité -->
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cybersécurité</h5>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                                90%
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>Wireshark</li>
+                            <li>Burp Suite</li>
+                            <li>Nmap</li>
+                            <li>Metasploit</li>
+                            <li>Aircrack-ng</li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="list-unstyled">
-                    <li>Wireshark</li>
-                    <li>Burp Suite</li>
-                    <li>Nmap</li>
-                    <li>Metasploit</li>
-                    <li>Aircrack-ng</li>
-                </ul>
             </div>
-        </div>
 
-        <!-- Compétence en Cloud Computing -->
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Cloud Computing</h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                        80%
+            <!-- Compétence en Cloud Computing -->
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Cloud Computing</h5>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                80%
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>Amazon Web Services (AWS)</li>
+                            <li>Microsoft Azure</li>
+                            <li>Google Cloud Platform (GCP)</li>
+                            <li>Docker</li>
+                            <li>Kubernetes</li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="list-unstyled">
-                    <li>Amazon Web Services (AWS)</li>
-                    <li>Microsoft Azure</li>
-                    <li>Google Cloud Platform (GCP)</li>
-                    <li>Docker</li>
-                    <li>Kubernetes</li>
-                </ul>
             </div>
         </div>
 
         <!-- Compétence en Gestion de projets informatiques -->
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Gestion de projets informatiques</h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                        75%
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Gestion de projets informatiques</h5>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                75%
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>Jira</li>
+                            <li>Méthode Agile</li>
+                            <li>Microsoft Project</li>
+                            <li>Slack</li>
+                            <li>Trello</li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="list-unstyled">
-                    <li>Jira</li>
-                    <li>Méthode Agile</li>
-                    <li>Microsoft Project</li>
-                    <li>Slack</li>
-                    <li>Trello</li>
-                </ul>
             </div>
-        </div>
 
-        <!-- Compétence en Réseaux informatiques -->
-        <div class="card mb-3">
-            <div class="card-body">
-                <h5 class="card-title">Réseaux informatiques</h5>
-                <div class="progress mb-3">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                        85%
+            <!-- Compétence en Réseaux informatiques -->
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Réseaux informatiques</h5>
+                        <div class="progress mb-3">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                85%
+                            </div>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li>Cisco Packet Tracer</li>
+                            <li>Wireshark</li>
+                            <li>SolarWinds</li>
+                            <li>Netcat</li>
+                            <li>GNS3</li>
+                        </ul>
                     </div>
                 </div>
-                <ul class="list-unstyled">
-                    <li>Cisco Packet Tracer</li>
-                    <li>Wireshark</li>
-                    <li>SolarWinds</li>
-                    <li>Netcat</li>
-                    <li>GNS3</li>
-                </ul>
             </div>
         </div>
     </div>
