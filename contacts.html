@@ -2,11 +2,17 @@
 <html lang="fr">
 <head>
     <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/5b32c9fcc1e09.js" data-cmp-host="c.c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
-    <title>Contact - Portfolio de Assoumane SAIDI</title>
+    <title data-lang-key="title_contacts">Contact - Portfolio de Assoumane SAIDI</title>
     <!-- Lien vers Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Polices Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lien vers le fichier CSS principal pour le menu -->
+    <link rel="stylesheet" href="styles.css">
     <!-- Lien vers le CSS spécifique à la page de contact -->
     <link rel="stylesheet" href="styles_contact.css">
+    <!-- Lien vers le fichier CSS amélioré (Surcharge) -->
+    <link rel="stylesheet" href="styles-enhanced.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Google tag (gtag.js) -->
@@ -18,60 +24,143 @@
 
   gtag('config', 'G-NZ0FQFSHSL');
 </script>
+<style>
+    /* ===== STABILITÉ LAYOUT ===== */
+    html {
+        overflow-y: scroll; /* Force la barre de défilement pour éviter le décalage */
+    }
+    
+    /* ===== ANIMATION ARRIÈRE-PLAN ===== */
+    #cyber-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.15; /* Subtil et professionnel */
+    }
+
+    /* ===== PROFESSIONAL DESIGN SYSTEM ===== */
+    :root {
+        --primary: #6366f1;
+        --secondary: #06b6d4;
+        --darker: #0d279a;
+        --light: #f8fafc;
+    }
+
+    /* ===== THEME CONTACT ===== */
+    .form-heading {
+        color: var(--light);
+    }
+
+    .input-field:focus {
+        outline: 1px solid var(--primary) !important;
+        box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+    }
+
+    .sendMessage-btn {
+        background: var(--primary) !important;
+        color: var(--darker) !important;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .sendMessage-btn:hover {
+        background: var(--secondary) !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(99, 102, 241, 0.2);
+    }
+
+    .success-message {
+        background: rgba(16, 185, 129, 0.15);
+        color: #10b981;
+        border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .error-message {
+        background: rgba(239, 68, 68, 0.15);
+        color: #ef4444;
+        border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+</style>
 </head>
 <body>
 
+
     <!-- Menu amélioré avec espacement -->
-    <ul class="ul">
+    <nav class="navbar-container">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="ul" id="navMenu">
         <li class="li">
-            <button class="button" onclick="window.location.href='index.html'">
-                <p>Accueil</p>
-            </button>
+            <a class="button" href="index.html">
+                <p data-lang-key="nav_home">Accueil</p>
+            </a>
         </li>
         <li class="li">
-            <button class="button" onclick="window.location.href='projets.html'">
-                <p>Projets</p>
-            </button>
+            <a class="button" href="projets.html">
+                <p data-lang-key="nav_projects">Projets</p>
+            </a>
         </li>
         <li class="li">
-            <button class="button" onclick="window.location.href='contacts.html'">
-                <p>Contacts</p>
-            </button>
+            <a class="button" href="contacts.html">
+                <p data-lang-key="nav_contact">Contacts</p>
+            </a>
         </li>
-    </ul>
+        </ul>
+    </nav>
 
     <div class="contact-section">
         <div class="form-card1">
             <div class="form-card2">
                 <form class="form" action="https://formspree.io/f/mnqewbed" method="POST">
-                    <p class="form-heading">Contactez-moi</p>
+                    <p class="form-heading" data-lang-key="contact_heading">Contactez-moi</p>
 
                     <div class="form-field">
-                        <input required placeholder="Nom" class="input-field" type="text" name="name" />
+                        <input required placeholder="Nom" class="input-field" type="text" name="name" data-lang-key="contact_name" />
                     </div>
 
                     <div class="form-field">
-                        <input required placeholder="Email" class="input-field" type="email" name="email" />
+                        <input required placeholder="Email" class="input-field" type="email" name="email" data-lang-key="contact_email" />
                     </div>
 
                     <div class="form-field">
-                        <input required placeholder="Sujet" class="input-field" type="text" name="subject" />
+                        <input required placeholder="Sujet" class="input-field" type="text" name="subject" data-lang-key="contact_subject" />
                     </div>
 
                     <div class="form-field">
-                        <textarea required placeholder="Message" cols="30" rows="4" class="input-field" name="message"></textarea>
+                        <textarea required placeholder="Message" cols="30" rows="4" class="input-field" name="message" data-lang-key="contact_message"></textarea>
                     </div>
 
-                    <button class="sendMessage-btn" type="submit">Envoyer</button>
+                    <button class="sendMessage-btn" type="submit" id="submitBtn" data-lang-key="contact_btn">Envoyer</button>
+                    <div class="form-message success-message" id="successMessage" data-lang-key="contact_success">✓ Message envoyé avec succès!</div>
+                    <div class="form-message error-message" id="errorMessage" data-lang-key="contact_error">✗ Erreur lors de l'envoi du message</div>
                 </form>
             </div>
         </div>
     </div>
 
     <!-- Charger les scripts à la fin pour optimiser le rendu -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- jQuery complet requis pour AJAX (version pro) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
+    <!-- Script pour afficher les animations et gérer la vidéo -->
+    <script src="script.js"></script>
+
+    <!-- Réseaux Sociaux (Bas Gauche) -->
+    <div class="social-widget">
+        <a href="#" class="social-link disabled" aria-label="GitHub (bientôt disponible)" onclick="return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/assoumane" target="_blank" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <div class="social-line"></div>
+    </div>
 </body>
 </html>

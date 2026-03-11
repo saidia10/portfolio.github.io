@@ -3,11 +3,23 @@
 <head>
     <script type="text/javascript" data-cmp-ab="1" src="https://cdn.consentmanager.net/delivery/autoblocking/5b32c9fcc1e09.js" data-cmp-host="c.c.delivery.consentmanager.net" data-cmp-cdn="cdn.consentmanager.net" data-cmp-codesrc="16"></script>
     <meta charset="UTF-8">
-    <title>Projets - Portfolio de Assoumane SAIDI</title>
-    <!-- Lien vers le fichier CSS spécifique à la page projets.html -->
-    <link rel="stylesheet" href="projets-styles.css">
-    <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mes projets en Cybersécurité, Pentest et Cloud. Projets de sécurité offensive/défensive et infrastructure.">
+    <meta name="keywords" content="Projets, Pentest, Cybersécurité, Web Security, Infrastructure, Cloud">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Mes Projets - Assoumane SAIDI">
+    <meta property="og:description" content="Portfolio de projets en Cybersécurité et Infrastructure">
+    <link rel="canonical" href="https://assoumane.com/projets.html">
+    <title data-lang-key="title_projects">Mes Projets - Portfolio Assoumane SAIDI</title>
+    <!-- Polices Premium -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lien vers le fichier CSS spécifique à la page projets.html -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien vers le fichier CSS amélioré (Surcharge) -->
+    <link rel="stylesheet" href="projets-styles.css">
+    <link rel="stylesheet" href="styles-enhanced.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23667eea' width='100' height='100'/><text x='50' y='50' font-size='60' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='white'>AS</text></svg>">
 
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ0FQFSHSL"></script>
@@ -18,88 +30,160 @@
 
   gtag('config', 'G-NZ0FQFSHSL');
 </script>
+<style>
+    /* ===== STABILITÉ LAYOUT ===== */
+    html {
+        overflow-y: scroll; /* Force la barre de défilement pour éviter le décalage */
+    }
+</style>
 </head>
 <body>
-    <!-- Menu de navigation -->
-    <ul class="ul">
-        <li class="li">
-            <button class="button" onclick="window.location.href='index.html'">Accueil</button>
-        </li>
-        <li class="li">
-            <button class="button" onclick="window.location.href='projets.html'">Projets</button>
-        </li>
-        <li class="li">
-            <button class="button" onclick="window.location.href='contacts.html'">Contacts</button>
-        </li>
-    </ul>
-
-    <!-- En-tête -->
-    <div class="header">
-        <h1>Projets</h1>
-        <p>Découvrez mes projets récents</p>
+    <!-- Vidéo d'arrière-plan -->
+    <div class="video-bg">
+        <video autoplay muted loop playsinline>
+            <source src="image/43635-436780328_medium.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
     </div>
+    <!-- Menu de navigation -->
+    <nav class="navbar-container">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="ul" id="navMenu">
+        <li class="li">
+            <a class="button" href="index.html">
+                <p data-lang-key="nav_home">Accueil</p>
+            </a>
+        </li>
+        <li class="li">
+            <a class="button" href="projets.html">
+                <p data-lang-key="nav_projects">Projets</p>
+            </a>
+        </li>
+        <li class="li">
+            <a class="button" href="contacts.html">
+                <p data-lang-key="nav_contact">Contacts</p>
+            </a>
+        </li>
+        </ul>
 
-    <!-- Contenu des projets -->
+
+    <!-- Contenu des projets amélioré -->
     <div class="container project-section">
         <div class="row">
             <!-- Projet 1 -->
-            <div class="col-md-6">
-                <div class="project-card card">
-                    <video src="image/project1.mp4" autoplay muted loop style="width: 100%;">
-                        Votre navigateur ne prend pas en charge la balise vidéo.
-                    </video>
-                    <div class="card-body">
-                        <h3>Projet 1</h3>
-                        <p>Test d'intrusion de site web</p>
-                        <button onclick="window.location.href='project1.pdf'">En savoir plus</button>
+            <div class="project-card card" aria-label="Projet 1 - Test d'intrusion">
+                <div class="project-media">
+                    <video src="image/project1.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+                    <div class="media-overlay">
+                        <div class="project-badges">
+                            <span class="badge">Pentest</span>
+                            <span class="badge">Web Security</span>
+                            <span class="badge">Burp Suite</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 data-lang-key="project_1_title">Audit de Sécurité Web - Application E-commerce</h3>
+                    <p data-lang-key="project_1_desc">Test d'intrusion complet d'une plateforme e-commerce incluant analyse des vulnérabilités OWASP Top 10, exploitation de failles XSS/SQLi, et recommandations de sécurisation.</p>
+                    <div class="project-actions">
+                        <a class="btn" href="project1.pdf" target="_blank" rel="noopener">Rapport Complet</a>
                     </div>
                 </div>
             </div>
+
             <!-- Projet 2 -->
-            <div class="col-md-6">
-                <div class="project-card card">
-                    <video src="image/project2.mp4" autoplay muted loop style="width: 100%;">
-                        Votre navigateur ne prend pas en charge la balise vidéo.
-                    </video>
-                    <div class="card-body">
-                        <h3>Projet 2</h3>
-                        <p>Docker conteneurisation</p>
-                        <button onclick="window.location.href='project2.pdf'">En savoir plus</button>
+            <div class="project-card card" aria-label="Projet 2 - Docker containerisation">
+                <div class="project-media">
+                    <video src="image/project2.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+                    <div class="media-overlay">
+                        <div class="project-badges">
+                            <span class="badge">Kubernetes</span>
+                            <span class="badge">Sécurité</span>
+                            <span class="badge">DevSecOps</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 data-lang-key="project_2_title">Orchestration & Sécurisation d'Infrastructures Kubernetes</h3>
+                    <p data-lang-key="project_2_desc">Orchestration Kubernetes : Déploiement CLI d'une infrastructure scalable (HPA, quotas CPU/RAM) et hautement disponible.
+Sécurité & MCO : Isolation par Namespaces, sécurisation des flux (NetworkPolicies) et diagnostic avancé pour la résilience.</p>
+                    <div class="project-actions">
+                        <a class="btn" href="Kubernet_gestion applicative.pdf" target="_blank" rel="noopener">Documentation Technique</a>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
+
             <!-- Projet 3 -->
-            <div class="col-md-6">
-                <div class="project-card card">
-                    <video src="image/project3.mp4" autoplay muted loop style="width: 100%;">
-                        Votre navigateur ne prend pas en charge la balise vidéo.
-                    </video>
-                    <div class="card-body">
-                        <h3>Projet 3</h3>
-                        <p>Supervision</p>
-                        <button onclick="window.location.href='project3.pdf'">En savoir plus</button>
+            <div class="project-card card" aria-label="Projet 3 - Supervision">
+                <div class="project-media">
+                    <video src="image/project3.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+                    <div class="media-overlay">
+                        <div class="project-badges">
+                            <span class="badge">Monitoring</span>
+                            <span class="badge">Linux</span>
+                            <span class="badge">Automatisation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 data-lang-key="project_3_title">Sécurisation & Monitoring Réseau Linux</h3>
+                    <p data-lang-key="project_3_desc">Network & Security Sentinel : Durcissement de serveurs Linux (Fail2Ban, UFW) et automatisation de la surveillance réseau par scripts Bash et tâches Cron.
+Analyse & Monitoring CLI : Diagnostic temps réel (tcpdump, nload) et centralisation d'indicateurs système (Glances) pour la résilience et l'audit de sécurité.</p>
+                    <div class="project-actions">
+                        <a class="btn" href="supervision.pdf" target="_blank" rel="noopener">Configuration & Déploiement</a>
                     </div>
                 </div>
             </div>
+
             <!-- Projet 4 -->
-            <div class="col-md-6">
-                <div class="project-card card">
-                    <video src="image/project4.mp4" autoplay muted loop style="width: 100%;">
-                        Votre navigateur ne prend pas en charge la balise vidéo.
-                    </video>
-                    <div class="card-body">
-                        <h3>Projet 4</h3>
-                        <p>Description du projet 4</p>
-                        <button onclick="window.location.href='project4.html'">En savoir plus</button>
+            <div class="project-card card locked" aria-label="Projet 4 - Infrastructure as Code - En cours">
+                <div class="project-media">
+                    <video src="image/project4.mp4" autoplay muted loop playsinline aria-hidden="true"></video>
+                    <div class="media-overlay">
+                        <div class="project-badges">
+                            <span class="badge">Infrastructure</span>
+                            <span class="badge">Terraform</span>
+                            <span class="badge">IaC</span>
+                            <span class="badge in-progress">En cours</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h3 data-lang-key="project_4_title">Infrastructure as Code - Migration Cloud</h3>
+                    <p data-lang-key="project_4_desc">Migration d'une infrastructure on-premise vers AWS, entièrement automatisée via une approche Infrastructure as Code (IaC) avec Terraform. Ce projet intègre un pipeline CI/CD pour le déploiement continu, la gestion des secrets avec HashiCorp Vault, et une posture de sécurité renforcée (politiques IAM, groupes de sécurité, monitoring).</p>
+                    <div class="project-actions">
+                        <a class="btn disabled" href="#" rel="noopener" aria-disabled="true" style="display: inline-flex; align-items: center; justify-content: center;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                            <span>Indisponible</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Charger les scripts nécessaires (jQuery et Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
     <!-- Chargement du script JavaScript -->
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Réseaux Sociaux (Bas Gauche) -->
+    <div class="social-widget">
+        <a href="#" class="social-link disabled" aria-label="GitHub (bientôt disponible)" onclick="return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/assoumane" target="_blank" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <div class="social-line"></div>
+    </div>
+</br>
 </body>
 </html>

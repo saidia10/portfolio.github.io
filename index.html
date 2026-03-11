@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Portfolio de Assoumane SAIDI</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio d'Assoumane SAIDI - Ingénieur Systèmes & Réseaux spécialisé en Cybersécurité et Cloud. Découvrez mes projets et compétences.">
+    <meta name="keywords" content="Cybersécurité, Cloud, AWS, Azure, Ingénieur Systèmes, Réseaux, Pentest, DevSecOps">
+    <meta name="author" content="Assoumane SAIDI">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio - Assoumane SAIDI">
+    <meta property="og:description" content="Ingénieur Systèmes & Réseaux | Spécialiste Cybersécurité & Cloud">
+    <meta property="og:url" content="https://assoumane.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://assoumane.com">
+    <title data-lang-key="title_portfolio">Portfolio de Assoumane SAIDI - Ingénieur Systèmes</title>
     <!-- Lien vers Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Polices Premium : Montserrat (Titres) & Inter (Corps) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Lien vers le fichier CSS personnalisé -->
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Lien vers le fichier CSS amélioré (Surcharge) -->
+    <link rel="stylesheet" href="styles-enhanced.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23667eea' width='100' height='100'/><text x='50' y='50' font-size='60' font-weight='bold' text-anchor='middle' dominant-baseline='middle' fill='white'>AS</text></svg>">
 
  <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NZ0FQFSHSL"></script>
@@ -17,156 +33,1341 @@
 
   gtag('config', 'G-NZ0FQFSHSL');
 </script>
+<style>
+/* ===== STABILITÉ LAYOUT ===== */
+html {
+    overflow-y: scroll; /* Force la barre de défilement pour éviter le décalage */
+}
+
+/* Pour que l'animation soit visible, on applique le fond à l'élément `html`
+   et on rend le `body` transparent. */
+html {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    background-attachment: fixed;
+}
+body { background: transparent !important; }
+
+    
+/* ===== ANIMATION ARRIÈRE-PLAN ===== */
+#cyber-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3; /* Visibilité augmentée pour un effet plus prononcé */
+}
+/* ===== PROFESSIONAL DESIGN SYSTEM ===== */
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #06b6d4;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --darker: #020617;
+    --light: #f8fafc;
+    --gray-100: #f1f5f9;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e1;
+    --gray-400: #94a3b8;
+    --gray-500: #64748b;
+    --gray-600: #475569;
+    --gray-700: #334155;
+    --gray-800: #1e293b;
+    --gray-900: #0f172a;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* ===== TYPOGRAPHY ===== */
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-weight: 500;
+    color: var(--gray-300);
+    margin-bottom: 2rem;
+    max-width: 600px;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+/* ===== HERO SECTION ===== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-xl);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: var(--gray-400);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== ABOUT SECTION ===== */
+.about-section {
+    padding: 3rem 0;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.about-content h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 1.5rem;
+}
+
+.about-content p {
+    color: var(--gray-300);
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.skill-tag {
+    background: rgba(99, 102, 241, 0.1);
+    color: #818cf8;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+}
+
+.skill-tag:hover {
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ===== SKILLS SECTION ===== */
+.skills-section {
+    padding: 3rem 0;
+    background: var(--darker);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover::before {
+    transform: scaleX(1);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-xl);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.skill-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 1rem;
+}
+
+.skill-description {
+    color: var(--gray-400);
+    line-height: 1.6;
+    flex-grow: 1; /* Permet à la description de prendre l'espace disponible */
+    margin-bottom: 1.5rem;
+}
+
+.skill-progress {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.skill-progress-bar {
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 3px;
+    transition: width 0.8s ease;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    color: var(--gray-300);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.skill-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* ===== EDUCATION SECTION ===== */
+.education-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.05) 0%, rgba(239, 68, 68, 0.05) 100%);
+}
+
+.education-timeline {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+}
+
+.education-timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary), var(--secondary));
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 80px;
+}
+
+.education-marker {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    width: 20px;
+    height: 20px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    border: 4px solid var(--darker);
+    z-index: 1;
+}
+
+.education-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: var(--shadow-xl);
+}
+
+.education-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--light);
+    margin-bottom: 0.5rem;
+}
+
+.education-year {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.education-description {
+    color: var(--gray-400);
+    line-height: 1.6;
+}
+
+/* ===== CTA SECTION ===== */
+.cta-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.1;
+}
+
+.cta-content {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.cta-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: var(--primary);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    background: var(--gray-100);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .education-timeline::before {
+        left: 20px;
+    }
+
+    .education-item {
+        padding-left: 60px;
+    }
+
+    .education-marker {
+        left: 10px;
+    }
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.section {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.about-content {
+    animation: slideInLeft 0.6s ease-out;
+}
+
+.skill-card {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.skill-card:nth-child(1) { animation-delay: 0.1s; }
+.skill-card:nth-child(2) { animation-delay: 0.2s; }
+.skill-card:nth-child(3) { animation-delay: 0.3s; }
+.skill-card:nth-child(4) { animation-delay: 0.4s; }
+
+.education-item {
+    animation: slideInRight 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.education-item:nth-child(1) { animation-delay: 0.1s; }
+.education-item:nth-child(2) { animation-delay: 0.2s; }
+.education-item:nth-child(3) { animation-delay: 0.3s; }
+
+/* ===== CHATBOT WIDGET STYLES (v2.0 - Premium) ===== */
+.chatbot-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: 'Inter', sans-serif;
+}
+
+.chatbot-toggle {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient-primary); /* Gradient background */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px -5px rgba(99, 102, 241, 0.6), 0 4px 15px -6px rgba(99, 102, 241, 0.5);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.chatbot-toggle:hover {
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 12px 35px -5px rgba(99, 102, 241, 0.7), 0 8px 20px -6px rgba(99, 102, 241, 0.6);
+}
+
+.toggle-avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,0.3);
+    padding: 2px;
+}
+
+.chatbot-container {
+    width: 380px; /* Taille réduite pour être moins imposant */
+    height: 550px; /* Hauteur ajustée */
+    max-height: calc(100vh - 120px); /* Empêche le chatbot d'être coupé en hauteur */
+    background: rgba(10, 12, 28, 0.85); /* Darker, more premium feel */
+    backdrop-filter: blur(30px) saturate(1.5); /* Enhanced glassmorphism */
+    border-radius: 24px; /* Softer radius */
+    box-shadow: 0 25px 60px -12px rgba(0, 0, 0, 0.7);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(99, 102, 241, 0.4); /* Brighter border */
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Smoother transition */
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    transform-origin: bottom right;
+}
+
+.chatbot-container.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.9) translateY(10px);
+}
+
+.chatbot-header {
+    background: transparent; /* Cleaner header */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.3); /* Consistent border */
+    flex-shrink: 0;
+}
+
+.chatbot-info h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--gray-100);
+}
+
+.chatbot-info p {
+    font-size: 0.8rem;
+    color: var(--gray-400);
+    margin: 4px 0 0 0;
+}
+
+.chatbot-close {
+    color: var(--gray-400);
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+.chatbot-close:hover {
+    color: white;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.chatbot-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+.message {
+    display: flex;
+    align-items: flex-end;
+    max-width: 90%;
+    animation: messageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes messageFadeIn {
+    from { opacity: 0; transform: translateY(15px) scale(0.95); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.bot-message { align-self: flex-start; }
+.user-message { align-self: flex-end; flex-direction: row-reverse; }
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--gray-700);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bot-message .avatar { margin-right: 12px; }
+.user-message .avatar { margin-left: 12px; background: var(--primary); }
+
+.avatar svg { width: 22px; height: 22px; color: var(--gray-200); }
+
+.message p {
+    margin: 0;
+    padding: 12px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.bot-message p {
+    background: var(--gray-800);
+    color: var(--gray-200);
+    border-bottom-left-radius: 6px; /* Tail effect */
+}
+.user-message p {
+    background: var(--gradient-primary); /* Gradient for user */
+    color: white;
+    border-bottom-right-radius: 6px; /* Tail effect */
+}
+
+/* Typing Indicator */
+.typing-indicator p {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+}
+.typing-indicator span {
+    height: 8px;
+    width: 8px;
+    background-color: var(--gray-400);
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2px;
+    animation: typing-bounce 1.3s infinite ease-in-out;
+}
+.typing-indicator span:nth-child(1) { animation-delay: -0.26s; }
+.typing-indicator span:nth-child(2) { animation-delay: -0.13s; }
+
+@keyframes typing-bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1.0); }
+}
+
+.chatbot-suggestions {
+    padding: 0 20px 15px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+    animation: messageFadeIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+    opacity: 0;
+}
+
+.suggestion-btn {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    color: #c4c6f5;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.suggestion-btn:hover {
+    background: rgba(99, 102, 241, 0.2);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.suggestion-btn.close-chat-btn {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.4);
+    color: #f87171;
+    width: 100%;
+}
+
+.suggestion-btn.close-chat-btn:hover {
+    background: rgba(239, 68, 68, 0.3);
+    color: #ef4444;
+    transform: translateY(-2px);
+}
+
+.chatbot-input-area {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 20px;
+    border-top: 1px solid rgba(99, 102, 241, 0.3);
+    background: rgba(10, 12, 28, 0.9); /* Solid dark background */
+    flex-shrink: 0;
+}
+
+.chatbot-input {
+    flex-grow: 1;
+    background: var(--gray-900);
+    border: 1px solid var(--gray-700);
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 15px;
+    color: var(--gray-200);
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.chatbot-input:focus {
+    border-color: var(--primary);
+    background: var(--dark);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3); /* Focus glow */
+}
+
+.chatbot-send {
+    flex-shrink: 0;
+    background: var(--gradient-primary);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-md);
+}
+
+.chatbot-send:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-lg);
+}
+.chatbot-send:disabled {
+    background: var(--gray-600);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+.chatbot-send svg {
+    width: 22px;
+    height: 22px;
+    transition: transform 0.3s ease;
+}
+.chatbot-send:hover:not(:disabled) svg {
+    transform: rotate(15deg);
+}
+
+@media (max-width: 768px) {
+    .chatbot-container {
+        width: 360px;
+        height: 70vh;
+        bottom: 90px;
+    }
+}
+
+@media (max-width: 480px) {
+    .chatbot-container {
+        width: calc(100vw - 20px); /* More screen real estate */
+        height: 75vh; /* Plus de hauteur sur mobile */
+        bottom: 90px;
+        position: fixed;
+        right: 10px;
+        left: 10px;
+    }
+    .chatbot-container.hidden {
+        transform: scale(0.9) translateY(10px);
+    }
+    .chatbot-widget {
+        bottom: 20px;
+        right: 20px;
+    }
+}
+</style>
 </head>
 <body>
-    <!-- Contenu de la page -->
-    <!-- Menu amélioré avec espacement -->
-    <ul class="ul">
-        <li class="li">
-            <button class="button" onclick="window.location.href='index.html'">
-                <p>Accueil</p>
-            </button>
-        </li>
-        <li class="li">
-            <button class="button" onclick="window.location.href='projets.html'">
-                <p>Projets</p>
-            </button>
-        </li>
-        <li class="li">
-            <button class="button" onclick="window.location.href='contacts.html'">
-                <p>Contacts</p>
-            </button>
-        </li>
-    </ul>
+    <!-- Animation Cyber Background -->
+    <canvas id="cyber-canvas"></canvas>
 
-    <!-- En-tête avec image de profil -->
-    <div class="header">
-        <img src="image/moi.png" alt="Photo de profil" class="profile-img">
-        <h1>Assoumane SAIDI</h1>
-    
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar-container">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="ul" id="navMenu">
+            <li class="li">
+                <a class="button" href="index.html">
+                    <p data-lang-key="nav_home">Accueil</p>
+                </a>
+            </li>
+            <li class="li">
+                <a class="button" href="projets.html">
+                    <p data-lang-key="nav_projects">Projets</p>
+                </a>
+            </li>
+            <li class="li">
+                <a class="button" href="contacts.html">
+                    <p data-lang-key="nav_contact">Contacts</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-    <!-- Section sur l'éducation -->
-    <div class="container section hidden">
-        <h2>Éducation</h2>
-        <div class="card">
-            <div class="card-body">
-                BTS SIO option SISR
-            </div>
+    <!-- Hero Introduction Section -->
+    <section style="padding: 60px 20px; text-align: center; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h1 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; margin-bottom: 1rem; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+                Assoumane SAIDI
+            </h1>
+            <p style="font-size: clamp(1rem, 2vw, 1.3rem); color: var(--gray-300); font-weight: 500; letter-spacing: 0.5px; margin: 0;">
+                Ingénieur Systèmes & Réseaux • Spécialiste Cybersécurité & Cloud
+            </p>
         </div>
-        <div class="card">
-            <div class="card-body">
-                Bachelor RPIR (Responsable de Projet Informatique et Réseau)
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-body">
-                Master en cybersécurité et cloud
-            </div>
-        </div>
-    </div>
-    <!-- Section des compétences -->
-    <div class="container section hidden">
-        <h2>Compétences</h2>
-        
-        <div class="row">
-            <!-- Compétence en Cybersécurité -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Cybersécurité</h5>
-                        <!-- Barre de progression pour indiquer le niveau -->
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-danger" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                                90%
-                            </div>
-                        </div>
-                        <!-- Liste des logiciels de cybersécurité -->
-                        <ul class="list-unstyled">
-                            <li>Wireshark</li>
-                            <li>Burp Suite</li>
-                            <li>Nmap</li>
-                            <li>Metasploit</li>
-                            <li>Aircrack-ng</li>
-                        </ul>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>À propos de moi</h3>
+                    <p>
+                        Passionné par la cybersécurité et l'architecture d'infrastructure sécurisée, je mets mon expertise au service d'entreprises souhaitant renforcer leur posture de sécurité tout en optimisant leurs opérations cloud.
+                    </p>
+                    <p>
+                        Mon approche combine rigueur technique, pensée stratégique et focus sur les résultats mesurables. Chaque projet est une opportunité d'apporter de la valeur tangible.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Cybersécurité</span>
+                        <span class="skill-tag">Penetration Testing</span>
+                        <span class="skill-tag">AWS/Azure</span>
+                        <span class="skill-tag">DevSecOps</span>
+                        <span class="skill-tag">Infrastructure</span>
+                        <span class="skill-tag">Monitoring</span>
                     </div>
                 </div>
-            </div>
-
-            <!-- Compétence en Cloud Computing -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Cloud Computing</h5>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                80%
-                            </div>
+                <div class="about-visual">
+                    <!-- Espace pour une image ou animation -->
+                    <div style="width: 100%; height: 300px; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="text-align: center; color: var(--gray-400);">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🚀</div>
+                            <p>Expertise Technique</p>
                         </div>
-                        <ul class="list-unstyled">
-                            <li>Amazon Web Services (AWS)</li>
-                            <li>Microsoft Azure</li>
-                            <li>Google Cloud Platform (GCP)</li>
-                            <li>Docker</li>
-                            <li>Kubernetes</li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
-        <!-- Compétence en Gestion de projets informatiques -->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Gestion de projets informatiques</h5>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                                75%
-                            </div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Jira</li>
-                            <li>Méthode Agile</li>
-                            <li>Microsoft Project</li>
-                            <li>Slack</li>
-                            <li>Trello</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- Skills Section -->
+    <section class="skills-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Domaines d'Expertise</h2>
+                <p class="section-description">
+                    Technologies et compétences maîtrisées pour des solutions d'infrastructure sécurisée
+                </p>
             </div>
 
-            <!-- Compétence en Réseaux informatiques -->
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-body">
-                        <h5>Réseaux informatiques</h5>
-                        <div class="progress mb-3">
-                            <div class="progress-bar bg-warning" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                85%
-                            </div>
-                        </div>
-                        <ul class="list-unstyled">
-                            <li>Cisco Packet Tracer</li>
-                            <li>Wireshark</li>
-                            <li>SolarWinds</li>
-                            <li>Netcat</li>
-                            <li>GNS3</li>
-                        </ul>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🔐</div>
+                    <h3 class="skill-title">Cybersécurité</h3>
+                    <p class="skill-description">
+                        Audit de sécurité, penetration testing, et mise en place de stratégies défensives.
+                    </p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 95%;"></div>
                     </div>
+                    <ul class="skill-list">
+                        <li>Penetration Testing (Burp Suite, Nmap)</li>
+                        <li>OSINT & Reconnaissance</li>
+                        <li>Vulnerability Assessment</li>
+                        <li>OWASP Top 10</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">☁️</div>
+                    <h3 class="skill-title">Cloud & DevOps</h3>
+                    <p class="skill-description">
+                        Architectures cloud scalables et pipelines d'automatisation modernes.
+                    </p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%;"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>AWS (EC2, S3, IAM, Lambda)</li>
+                        <li>Azure & Google Cloud</li>
+                        <li>Docker & Kubernetes</li>
+                        <li>Terraform, Ansible</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3 class="skill-title">Infrastructure & Monitoring</h3>
+                    <p class="skill-description">
+                        Administration systèmes et mise en place de solutions de supervision.
+                    </p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 88%;"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Linux/Windows Administration</li>
+                        <li>Grafana, Prometheus</li>
+                        <li>Proxy, Firewall (Cisco)</li>
+                        <li>Virtualisation (Proxmox)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🖥️</div>
+                    <h3 class="skill-title">Systèmes</h3>
+                    <p class="skill-description">
+                        Administration et maintenance des environnements serveurs et virtualisation.
+                    </p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 90%;"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Windows Server, Active Directory</li>
+                        <li>Linux (RedHat, Ubuntu)</li>
+                        <li>Virtualisation (VMware)</li>
+                        <li>Scripting (PowerShell, Bash)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3 class="skill-title">Réseaux</h3>
+                    <p class="skill-description">
+                        Conception, déploiement et sécurisation des architectures réseaux.
+                    </p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 85%;"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Cisco (CCNA)</li>
+                        <li>TCP/IP, DNS, DHCP</li>
+                        <li>Firewalls & VPN</li>
+                        <li>Wireshark Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3 class="skill-title">Intelligence Artificielle</h3>
+                    <p class="skill-description">
+                        Développement de solutions IA et intégration de modèles de Machine Learning.
+                    </p>
+                    <div class="skill-progress">
+                        <div class="skill-progress-bar" style="width: 80%;"></div>
+                    </div>
+                    <ul class="skill-list">
+                        <li>Claude Code, Openclaw</li>
+                        <li>Machine Learning</li>
+                        <li>OpenAI API & LLM</li>
+                        <li>N8N</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Charger les scripts à la fin pour optimiser le rendu -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <!-- Script pour afficher les animations -->
+    <!-- Widget Chatbot -->
+    <div class="chatbot-widget">
+        <div class="chatbot-toggle" id="chatbotToggle">
+            <img src="image/moi.png" alt="Chatbot" class="toggle-avatar">
+            <div class="pulse"></div>
+        </div>
+        <div class="chatbot-container hidden" id="chatbotWindow">
+            <div class="chatbot-card">
+                <div class="chatbot-header">
+                    <div class="chatbot-info">
+                        <h2 data-lang-key="chatbot_name">Assoumane SAIDI</h2>
+                        <p data-lang-key="chatbot_role">Assistant Personnel</p>
+                    </div>
+                    <button class="chatbot-close" id="chatbotClose">✕</button>
+                </div>
+                <div class="chatbot-messages" id="chatMessages">
+                    <!-- Les messages du chatbot apparaîtront ici dynamiquement -->
+                </div>
+                <div class="chatbot-suggestions" id="chatSuggestions">
+                    <!-- Les suggestions de questions apparaîtront ici -->
+                </div>
+                <div class="chatbot-input-area">
+                    <input type="text" id="userInput" class="chatbot-input" placeholder="Posez une question..." data-lang-key="chatbot_input" autocomplete="off">
+                    <button class="chatbot-send" id="sendBtn" aria-label="Send Message">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Réseaux Sociaux -->
+    <div class="social-widget">
+        <a href="#" class="social-link disabled" aria-label="GitHub (bientôt disponible)" onclick="return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/assoumane" target="_blank" class="social-link" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <div class="social-line"></div>
+    </div>
+
+    <!-- Transformers.js pour l'IA côté client (alternative gratuite à OpenAI) -->
+    <script src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.1"></script>
+
+    <!-- Script pour les animations -->
     <script src="script.js"></script>
 
+    <!-- Animation Matrix Rain (Le Monde de l'Informatique) -->
+    <script>
+        (function() {
+            const canvas = document.getElementById('cyber-canvas');
+            if (!canvas) return;
+
+            const ctx = canvas.getContext('2d');
+            let width, height;
+
+            function resize() {
+                width = window.innerWidth;
+                height = window.innerHeight;
+                canvas.width = width;
+                canvas.height = height;
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            // Mélange de binaire et caractères hexadécimaux pour l'effet "Code"
+            const chars = "01010101ABCDEFGHIJKLMNOPQRSTUVWXYZ<>";
+            const fontSize = 14;
+            const columns = Math.ceil(width / fontSize);
+            const drops = [];
+
+            // Initialisation des positions
+            for (let x = 0; x < columns; x++) {
+                drops[x] = 1;
+            }
+
+            function draw() {
+                // Fond semi-transparent pour créer l'effet de traînée
+                ctx.fillStyle = 'rgba(2, 6, 23, 0.05)';
+                ctx.fillRect(0, 0, width, height);
+
+                ctx.fillStyle = '#6366f1'; // Couleur primaire (Indigo) pour le texte
+                ctx.font = fontSize + 'px monospace';
+
+                for (let i = 0; i < drops.length; i++) {
+                    const text = chars.charAt(Math.floor(Math.random() * chars.length));
+                    ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                    if (drops[i] * fontSize > height && Math.random() > 0.975) {
+                        drops[i] = 0;
+                    }
+                    drops[i]++;
+                }
+            }
+            setInterval(draw, 33); // ~30 FPS
+        })();
+    </script>
+
+    <script>
+        // Animation des barres de progression au scroll
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.skill-progress-bar');
+                    progressBars.forEach(bar => {
+                        bar.style.width = bar.style.width || '0%';
+                    });
+                }
+            });
+        }, observerOptions);
+
+        // Observer toutes les cartes de compétences
+        document.querySelectorAll('.skill-card').forEach(card => {
+            observer.observe(card);
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Elements ---
+            const chatbotToggle = document.getElementById('chatbotToggle');
+            const chatbotWindow = document.getElementById('chatbotWindow');
+            const chatbotClose = document.getElementById('chatbotClose');
+            const chatMessages = document.getElementById('chatMessages');
+            const chatSuggestions = document.getElementById('chatSuggestions');
+            const userInput = document.getElementById('userInput');
+            const sendBtn = document.getElementById('sendBtn');
+
+            // --- Arbre de conversation avec plusieurs cheminements ---
+            const conversationTree = {
+                'start': {
+                    'response': "Bonjour ! 👋 Je suis l'assistant virtuel d'Assoumane. Que souhaitez-vous savoir ?",
+                    'suggestions': [
+                        { 'text': 'Quelles sont ses compétences ?', 'next': 'skills_main' },
+                        { 'text': 'Parle-moi de ses projets', 'next': 'projects_main' },
+                        { 'text': 'Comment le contacter ?', 'next': 'contact_main' }
+                    ]
+                },
+                'skills_main': {
+                    'response': "Assoumane a une expertise variée. Quel domaine vous intéresse le plus ?",
+                    'suggestions': [
+                        { 'text': 'Cybersécurité', 'next': 'skills_cyber' },
+                        { 'text': 'Cloud & DevOps', 'next': 'skills_cloud' },
+                        { 'text': 'Réseaux & Systèmes', 'next': 'skills_infra' },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'skills_cyber': {
+                    'response': "En <strong>Cybersécurité</strong>, il maîtrise le Pentest (Burp Suite, Nmap), l'analyse de vulnérabilités (OWASP Top 10) et la sécurisation d'infrastructures.",
+                    'suggestions': [
+                        { 'text': 'Autres compétences', 'next': 'skills_main' },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'skills_cloud': {
+                    'response': "En <strong>Cloud & DevOps</strong>, ses compétences incluent AWS, Azure, Docker, Kubernetes et l'automatisation avec Terraform et Ansible.",
+                    'suggestions': [
+                        { 'text': 'Autres compétences', 'next': 'skills_main' },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'skills_infra': {
+                    'response': "En <strong>Infrastructure</strong>, il gère l'administration des systèmes Linux/Windows, la virtualisation (VMware, Proxmox) et le monitoring (Grafana, Prometheus).",
+                    'suggestions': [
+                        { 'text': 'Autres compétences', 'next': 'skills_main' },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'projects_main': {
+                    'response': "Ses projets sont visibles sur la page dédiée. Voulez-vous y aller ou avoir un aperçu d'un projet spécifique ici ?",
+                    'suggestions': [
+                        { 'text': 'Aperçu Audit Sécurité', 'next': 'project_audit' },
+                        { 'text': 'Aperçu Projet K8s', 'next': 'project_k8s' },
+                        { 'text': 'Voir tous les projets', 'action': () => { window.location.href = 'projets.html'; } },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'project_audit': {
+                    'response': "Il a mené un audit complet d'une plateforme e-commerce, en identifiant et corrigeant des failles critiques (XSS, SQLi). Le rapport est disponible sur la page projets.",
+                    'suggestions': [
+                        { 'text': 'Autre projet', 'next': 'projects_main' },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'project_k8s': {
+                    'response': "Il a déployé et sécurisé une infrastructure Kubernetes hautement disponible, en utilisant des NetworkPolicies et des quotas pour optimiser les ressources.",
+                    'suggestions': [
+                        { 'text': 'Autre projet', 'next': 'projects_main' },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                },
+                'contact_main': {
+                    'response': "Vous pouvez le contacter directement via le formulaire du site ou via son profil LinkedIn. Comment souhaitez-vous procéder ?",
+                    'suggestions': [
+                        { 'text': 'Ouvrir le formulaire', 'action': () => { window.location.href = 'contacts.html'; } },
+                        { 'text': 'Voir son profil LinkedIn', 'action': () => { window.open('https://www.linkedin.com/in/assoumane', '_blank'); } },
+                        { 'text': 'Menu principal', 'next': 'start' }
+                    ]
+                }
+            };
+
+            let currentState = 'start';
+
+            const toggleChatbot = () => {
+                chatbotWindow.classList.toggle('hidden');
+                chatbotToggle.classList.toggle('hidden');
+            };
+
+            const addMessage = (message, isUser = false) => {
+                const messageWrapper = document.createElement('div');
+                messageWrapper.classList.add('message', isUser ? 'user-message' : 'bot-message');
+                messageWrapper.innerHTML = `<p>${message}</p>`;
+                chatMessages.appendChild(messageWrapper);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            };
+
+            const showSuggestions = (suggestions) => {
+                chatSuggestions.innerHTML = '';
+                if (!suggestions) return;
+                suggestions.forEach(s => {
+                    const btn = document.createElement('button');
+                    btn.className = 'suggestion-btn';
+                    btn.textContent = s.text;
+                    btn.onclick = () => handleSuggestionClick(s);
+                    chatSuggestions.appendChild(btn);
+                });
+            };
+
+            const handleSuggestionClick = (suggestion) => {
+                addMessage(suggestion.text, true);
+                if (suggestion.action) {
+                    suggestion.action();
+                } else if (suggestion.next) {
+                    currentState = suggestion.next;
+                    const node = conversationTree[currentState];
+                    setTimeout(() => {
+                        addMessage(node.response, false);
+                        showSuggestions(node.suggestions);
+                    }, 400);
+                }
+            };
+
+            chatbotToggle.addEventListener('click', toggleChatbot);
+            chatbotClose.addEventListener('click', toggleChatbot);
+            sendBtn.addEventListener('click', () => addMessage("Veuillez utiliser les boutons de suggestion.", false));
+            userInput.addEventListener('keypress', (e) => e.key === 'Enter' && addMessage("Veuillez utiliser les boutons de suggestion.", false));
+
+            // Initialisation
+            const startNode = conversationTree.start;
+            addMessage(startNode.response, false);
+            showSuggestions(startNode.suggestions);
+        });
+    </script>
 </body>
 </html>
